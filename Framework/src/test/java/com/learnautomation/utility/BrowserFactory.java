@@ -33,7 +33,8 @@ public class BrowserFactory {
 			System.out.println("We do not support this browser");
 		}
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
+		driver.manage().linux().maximize();
 		driver.get(appURL);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
