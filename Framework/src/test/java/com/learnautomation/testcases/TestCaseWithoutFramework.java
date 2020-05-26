@@ -30,7 +30,7 @@ public class TestCaseWithoutFramework {
 		driver.quit();
 	}
 @Test
-	public void test02Chrome()
+	public void test02Chrome() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		
