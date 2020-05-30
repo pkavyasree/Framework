@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class BrowserFactory {
 	
-     public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
+	public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
 	{
 		if(browserName.equals("Chrome"))
 		{
@@ -18,6 +20,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 		else if(browserName.equals("Firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+			//Firefoxoptions options= new Firefoxoptions();
+			//options.setHeadless(true);
 			driver=new FirefoxDriver();
 		}
 		else if(browserName.equals("IE"))
@@ -29,6 +33,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 		{
 			System.out.println("We do not support this browser");
 		}
+		
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(appURL);
