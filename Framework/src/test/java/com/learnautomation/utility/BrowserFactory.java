@@ -6,21 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
-public class BrowserFactory {
 	
-
-	public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
+     public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
 	{
 		if(browserName.equals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 			driver=new ChromeDriver();
 			
 		}
 		else if(browserName.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 			driver=new FirefoxDriver();
 		}
 		else if(browserName.equals("IE"))
