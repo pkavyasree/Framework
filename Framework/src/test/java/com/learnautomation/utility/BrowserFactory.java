@@ -13,13 +13,13 @@ public class BrowserFactory {
 	{
 		if(browserName.equals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe");
 			driver=new ChromeDriver();
 			
 		}
 		else if(browserName.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "C:\Program Files\Mozilla Firefox\firefox.exe");
 			//Firefoxoptions options= new Firefoxoptions();
 			//options.setHeadless(true);
 			driver=new FirefoxDriver();
