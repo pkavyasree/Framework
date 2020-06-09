@@ -19,7 +19,7 @@ public class BrowserFactory {
 		}
 		else if(browserName.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "C:\Program Files\Mozilla Firefox\firefox.exe");
+			System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
 			//Firefoxoptions options= new Firefoxoptions();
 			//options.setHeadless(true);
 			driver=new FirefoxDriver();
